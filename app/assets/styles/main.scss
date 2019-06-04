@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    MAIN (imports)
+\*------------------------------------*/
+
+/* ----- Base/Shared Styles ----- */
+
+@import "normalize";
+@import "vars";
+@import "mixins";
+@import "global";
+
+
+/* ----- Component Styles ----- */
+
+// Page-specific overrides for a given component should still be placed in the *component* scss.
+
+
+/* ----- Page-Specific Styles ----- */
+
+@import "../../pages/index/index";

@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    GLOBAL/BASE STYLES
+\*------------------------------------*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%; // set root font size to ~10px for easy calculation
+}
+
+html {
+    box-sizing: border-box; // subtract padding from declared widths
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.4; // unitless line-height to be based off the element's size
+}

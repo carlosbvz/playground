@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+
+
+/* ----- Responsive ----- */
+
+// Dynamic Media Queries
+// Modified from https://coderwall.com/p/brz5-g
+
+// 1st argument = breakpoint value
+// 2nd argument (optional) = either 2nd breakpoint value or the word max to make it a max-width query
+@mixin respond-to($val, $val2: none) {
+    @if ($val2 == none) {
+    	@media (min-width: $val) { @content; }
+
+    } @else if ($val2 == max) {
+    	@media (max-width: $val) { @content; }
+
+    } @else {
+    	@media (min-width: $val) and (max-width: $val2) { @content; }
+    }
+}
+
+
+/* ----- Typography ----- */
+
+// Mixins for Rem Font Sizing
+// Modified from: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+// NOTE: This can be removed or not used if IE8 support is not needed
+
+// 1st argument = a multiple of our 10px base font size (ie. 1.3)
+// 2nd argument (optional) = a property (font-size is the default)
+@mixin rem($sizeValue, $property: font-size) {
+    #{ $property } : ($sizeValue * 10) + px;
+    #{ $property } : $sizeValue + rem;
+}
