@@ -1,5 +1,12 @@
 /* ----- Input component styles ----- */
 
 .input {
-
+    position: relative;
+    margin-top: 20px;
+    &-container{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
 }

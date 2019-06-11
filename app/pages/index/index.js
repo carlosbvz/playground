@@ -8,6 +8,11 @@ APP.index = (function(){
         // ...
     };
 
+     var inputValFunc = $('.input-field').keyup(function(e) {
+        var inputVal = $(this).val();
+        return inputVal;
+      });
+
     var init = function() {
         console.log('APP.index');
         bindEventsToUI();
@@ -17,7 +22,8 @@ APP.index = (function(){
      * interfaces to public functions
      */
     return {
-        init: init
+        init: init,
+        inputValFunc: inputValFunc
     };
 
 }());
